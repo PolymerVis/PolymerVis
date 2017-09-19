@@ -1,5 +1,5 @@
 {
-  "name": "PolymerVis",
+  "name": "polymer-vis",
   "description":
     "Global namespace with some utilities functions for PolymerVis.",
   "main": "polymer-vis.html",
