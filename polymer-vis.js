@@ -26,7 +26,7 @@
     ele.async = optAsync;
     if (onload) ele.onload = onload;
     if (onerror) ele.onerror = onerror;
-    document.appendChild(ele);
+    document.body.appendChild(ele);
     return ele;
   };
 
@@ -52,7 +52,7 @@
     ele.async = optAsync;
     if (onload) ele.onload = onload;
     if (onerror) ele.onerror = onerror;
-    document.appendChild(ele);
+    document.body.appendChild(ele);
     return ele;
   };
 })((window.PolymerVis = window.PolymerVis || {}));
