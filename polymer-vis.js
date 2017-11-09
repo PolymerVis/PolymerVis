@@ -55,4 +55,42 @@
     document.body.appendChild(ele);
     return ele;
   };
+
+  /**
+   * Load an external CSS file, and insert a `style` element
+   * into the shadowRoot.
+   * @alias module:insertCssIntoShadowRoot
+   * @param {String} cssSrc url to the css file
+   * @param {String} shadowRoot Node to insert the `style` element
+   * @param {String} id id for style element
+   * @example
+   * PolymerVis.insertCssIntoShadowRoot('https://some.css', ele.shadowRoot, 'custom');
+   */
+  PolymerVis.insertCssIntoShadowRoot = function insertCssIntoShadowRoot(
+    cssSrc,
+    shadowRoot,
+    id = 'custom'
+  ) {
+    var httpRequest = new XMLHttpRequest();
+    if (!httpRequest) {
+      console.warn(`cannot create XMLHttpRequest to load ${cssSrc}`);
+      return;
+    }
+    httpRequest.onreadystatechange = () => {
+      if (httpRequest.readyState === XMLHttpRequest.DONE) {
+        if (httpRequest.status === 200) {
+          var style =
+            shadowRoot.querySelector(`#${id}`) ||
+            document.createElement('style');
+          style.id = id;
+          style.textContent = httpRequest.responseText;
+          shadowRoot.appendChild(style);
+        } else {
+          console.warn(`cannot load ${cssSrc}`);
+        }
+      }
+    };
+    httpRequest.open('GET', cssSrc);
+    httpRequest.send();
+  };
 })((window.PolymerVis = window.PolymerVis || {}));

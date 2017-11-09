@@ -1,7 +1,7 @@
 # PolymerVis
 PolymerVis is a suite of Polymer elements for visualizations.
 
-*Quick start*
+## Quick start
 Import the `polymer-vis.html` file to use any of the utility functions.
 
 ```html
@@ -13,6 +13,7 @@ Alternatively, you can also include it as a script instead.
 <script src="../bower_components/build/es5/polymer-vis.js"></script>
 ```
 
+## API reference
   <a name="exp_module_loadScript--PolymerVis.loadScript"></a>
 
 ## PolymerVis.loadScript(src, onload, onerror, optAsync) ⇒ <code>HTMLScriptElement</code> ⏏
@@ -51,3 +52,21 @@ imported document contents.
 | onerror | <code>function</code> | callback when error loading script. |
 | optAsync | <code>boolean</code> | whether to execute the script asynchronously. |
 
+  <a name="exp_module_insertCssIntoShadowRoot--PolymerVis.insertCssIntoShadowRoot"></a>
+
+## PolymerVis.insertCssIntoShadowRoot(cssSrc, shadowRoot, id) ⏏
+Load an external CSS file, and insert a `style` element
+into the shadowRoot.
+
+**Kind**: global method of [<code>PolymerVis.insertCssIntoShadowRoot</code>](#exp_module_insertCssIntoShadowRoot--PolymerVis.insertCssIntoShadowRoot)  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| cssSrc | <code>String</code> | url to the css file |
+| shadowRoot | <code>String</code> | Node to insert the `style` element |
+| id | <code>String</code> | id for style element |
+
+**Example**  
+```js
+PolymerVis.insertCssIntoShadowRoot('https://some.css', ele.shadowRoot, 'custom');
+```

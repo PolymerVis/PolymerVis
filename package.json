@@ -7,7 +7,7 @@
     "lint": "npx eslint *.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build":
-      "npx polymer build && npx jsdoc2md --template README.hbs --files polymer-vis.js > README.md",
+      "npx jsdoc2md --template README.hbs --files polymer-vis.js > README.md",
     "precommit": "lint-staged"
   },
   "lint-staged": {
