@@ -1,0 +1,251 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en">
+
+
+<head>
+  <meta charset="utf-8">
+
+  <title>JSDoc: Namespace: PolymerVis</title>
+  <script src="scripts/prettify/prettify.js">
+
+  </script>
+  <script src="scripts/prettify/lang-css.js">
+
+  </script>
+  <!-- [if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif] -->
+  <link type="text/css"
+    rel="stylesheet"
+    href="styles/prettify-tomorrow.css">
+
+  <link type="text/css"
+    rel="stylesheet"
+    href="styles/jsdoc-default.css">
+
+</head>
+
+<body>
+
+  <div id="main">
+    <h1 class="page-title">Namespace: PolymerVis</h1>
+
+    <section>
+
+      <header>
+        <h2>PolymerVis</h2>
+      </header>
+
+      <article>
+
+        <div class="container-overview">
+          <div class="description">PolymerVis is a suite of Polymer elements for visualizations.
+          </div>
+
+          <dl class="details">
+            <dt class="tag-source">Source:</dt>
+
+            <dd class="tag-source">
+
+              <ul class="dummy">
+
+                <li>
+                  <a href="polymer-vis.js.html">polymer-vis.js</a>,
+                  <a href="polymer-vis.js.html#line1">line 1</a>
+                </li>
+              </ul>
+            </dd>
+          </dl>
+        </div>
+        <h3 class="subsection-title">Methods</h3>
+        <h4 class="name"
+          id=".insertCssIntoShadowRoot">
+          <span class="type-signature">(static)</span>insertCssIntoShadowRoot
+          <span class="signature">(cssSrc, shadowRoot, onload, id)</span>
+          <span class="type-signature" />
+
+        </h4>
+
+        <div class="description">Load an external CSS file, and insert a `style` element into the shadowRoot.
+        </div>
+        <h5>Parameters:</h5>
+
+        <table class="params">
+
+          <thead>
+
+            <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Default</th>
+              <th class="last">Description</th>
+            </tr>
+          </thead>
+
+          <tbody>
+
+            <tr>
+              <td class="name">
+                <code>cssSrc</code>
+              </td>
+
+              <td class="type">
+                <span class="param-type">String</span>
+              </td>
+
+              <td class="default">
+              </td>
+              <td class="description last">url to the css file</td>
+            </tr>
+
+            <tr>
+              <td class="name">
+                <code>shadowRoot</code>
+              </td>
+
+              <td class="type">
+                <span class="param-type">String</span>
+              </td>
+
+              <td class="default">
+              </td>
+              <td class="description last">Node to insert the `style` element
+              </td>
+            </tr>
+
+            <tr>
+              <td class="name">
+                <code>onload</code>
+              </td>
+
+              <td class="type">
+                <span class="param-type">function</span>
+              </td>
+
+              <td class="default">
+              </td>
+              <td class="description last">callback when CSS is inserted</td>
+            </tr>
+
+            <tr>
+              <td class="name">
+                <code>id</code>
+              </td>
+
+              <td class="type">
+                <span class="param-type">String</span>
+              </td>
+
+              <td class="default">custom
+              </td>
+              <td class="description last">id for style element</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <dl class="details">
+          <dt class="tag-source">Source:</dt>
+
+          <dd class="tag-source">
+
+            <ul class="dummy">
+
+              <li>
+                <a href="polymer-vis.js.html">polymer-vis.js</a>,
+                <a href="polymer-vis.js.html#line69">line 69</a>
+              </li>
+            </ul>
+          </dd>
+        </dl>
+        <h5>Example</h5>
+
+        <pre class="prettyprint">
+
+          <code>import PolymerVis from '../polymer-vis/polymer-vis.js'; PolymerVis.insertCssIntoShadowRoot('https://some.css', ele.shadowRoot, null, 'custom');
+          </code>
+        </pre>
+        <h4 class="name"
+          id=".isInShadowRoot">
+          <span class="type-signature">(static)</span>isInShadowRoot
+          <span class="signature">(node)</span>
+          <span class="type-signature">→ {Node}</span>
+        </h4>
+
+        <div class="description">Check if the node is inside a [`shadowRoot`](https://developer.mozilla.org/en-US/docs/Web/API/shadowRoot) or not. Return the `shadowRoot` otherwise return `false`.
+        </div>
+        <h5>Parameters:</h5>
+
+        <table class="params">
+
+          <thead>
+
+            <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th class="last">Description</th>
+            </tr>
+          </thead>
+
+          <tbody>
+
+            <tr>
+              <td class="name">
+                <code>node</code>
+              </td>
+
+              <td class="type">
+                <span class="param-type">Node</span>
+              </td>
+              <td class="description last">the node to check</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <dl class="details">
+          <dt class="tag-source">Source:</dt>
+
+          <dd class="tag-source">
+
+            <ul class="dummy">
+
+              <li>
+                <a href="polymer-vis.js.html">polymer-vis.js</a>,
+                <a href="polymer-vis.js.html#line106">line 106</a>
+              </li>
+            </ul>
+          </dd>
+        </dl>
+        <h5>Returns:</h5>
+
+        <dl>
+
+          <dt>Type
+          </dt>
+
+          <dd>
+            <span class="param-type">Node</span>
+          </dd>
+        </dl>
+        <h4 class="name"
+          id=".loadScript">
+          <span class="type-signature">(static)</span>loadScript
+          <span class="signature">(src, onload, onerror, optAsync)</span>
+          <span class="type-signature">→ {HTMLScriptElement}</span>
+        </h4>
+
+        <div class="description">Convenience method for dynamically loading a script. This method creates a new `
+
+          <script>` element with the provided URL and appends it to the document to start loading. In the onload callback, the import property of the link element will contain the imported document contents. </div> <h5>Parameters:</h5> <table class="params"> <thead> <tr> <th>Name</th> <th>Type</th> <th>Default</th> <th class="last">Description</th> </tr> </thead> <tbody> <tr> <td class="name"><code>src</code></td> <td class="type"> <span class="param-type">string</span> </td> <td class="default"> </td> <td class="description last">The url to the script to load.</td> </tr> <tr> <td class="name"><code>onload</code></td> <td class="type"> <span class="param-type">function</span> </td> <td class="default"> </td> <td class="description last">callback when script is loaded.</td> </tr> <tr> <td class="name"><code>onerror</code></td> <td class="type"> <span class="param-type">function</span> </td> <td class="default"> </td> <td class="description last">callback when error loading script.</td> </tr> <tr> <td class="name"><code>optAsync</code></td> <td class="type"> <span class="param-type">boolean</span> </td> <td class="default"> true </td> <td class="description last">whether to execute the script asynchronously.</td> </tr> </tbody> </table> <dl class="details"> <dt class="tag-source">Source:</dt> <dd class="tag-source"><ul class="dummy"><li> <a href="polymer-vis.js.html">polymer-vis.js</a>, <a href="polymer-vis.js.html#line21">line 21</a> </li></ul></dd> </dl> <h5>Returns:</h5> <dl> <dt> Type </dt> <dd> <span class="param-type">HTMLScriptElement</span> </dd> </dl> <h4 class="name" id=".loadStylesheet"><span class="type-signature">(static) </span>loadStylesheet<span class="signature">(href, onload, onerror, optAsync)</span><span class="type-signature"> &rarr; {HTMLLinkElement}</span></h4> <div class="description"> Convenience method for dynamically loading a stylesheet. This method creates a new `<link rel="stylesheet">` element with the provided URL and appends it to the document to start loading. In the onload callback, the import property of the link element will contain the imported document contents. </div> <h5>Parameters:</h5> <table class="params"> <thead> <tr> <th>Name</th> <th>Type</th> <th>Default</th> <th class="last">Description</th> </tr> </thead> <tbody> <tr> <td class="name"><code>href</code></td> <td class="type"> <span class="param-type">string</span> </td> <td class="default"> </td> <td class="description last">The url to the script to load.</td> </tr> <tr> <td class="name"><code>onload</code></td> <td class="type"> <span class="param-type">function</span> </td> <td class="default"> </td> <td class="description last">callback when script is loaded.</td> </tr> <tr> <td class="name"><code>onerror</code></td> <td class="type"> <span class="param-type">function</span> </td> <td class="default"> </td> <td class="description last">callback when error loading script.</td> </tr> <tr> <td class="name"><code>optAsync</code></td> <td class="type"> <span class="param-type">boolean</span> </td> <td class="default"> true </td> <td class="description last">whether to execute the script asynchronously.</td> </tr> </tbody> </table> <dl class="details"> <dt class="tag-source">Source:</dt> <dd class="tag-source"><ul class="dummy"><li> <a href="polymer-vis.js.html">polymer-vis.js</a>, <a href="polymer-vis.js.html#line46">line 46</a> </li></ul></dd> </dl> <h5>Returns:</h5> <dl> <dt> Type </dt> <dd> <span class="param-type">HTMLLinkElement</span> </dd> </dl> </article> </section> </div> <nav> <h2><a href="index.html">Home</a></h2><h3>Namespaces</h3><ul><li><a href="PolymerVis.html">PolymerVis</a></li></ul> </nav> <br class="clear"> <footer> Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Fri Nov 17 2017 00:22:49 GMT+0800 (DST) </footer> <script> prettyPrint();
+          </script>
+          <script src="scripts/linenumber.js">
+
+          </script>
+        </div>
+      </article>
+    </section>
+  </div>
+</body>
+</html>

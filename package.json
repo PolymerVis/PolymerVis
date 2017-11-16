@@ -1,13 +1,19 @@
 {
-  "name": "polymer-vis",
+  "name": "@polymer-vis/polymer-vis",
+  "flat": true,
+  "version": "3.0.0-pre.1",
   "description":
     "Global namespace with some utilities functions for PolymerVis.",
   "main": "polymer-vis.html",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/PolymerVis/polymer-vis.git"
+  },
   "scripts": {
     "lint": "npx eslint *.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build":
-      "npx jsdoc2md --template README.hbs --files polymer-vis.js > README.md",
+      "npx jsdoc2md --template README.hbs --files polymer-vis.js > README.md && npx jsdoc -d ./docs ./polymer-vis.js",
     "precommit": "lint-staged"
   },
   "lint-staged": {
