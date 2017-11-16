@@ -93,4 +93,21 @@
     httpRequest.open('GET', cssSrc);
     httpRequest.send();
   };
+
+  /**
+   * Check if the node is inside a [`shadowRoot`](https://developer.mozilla.org/en-US/docs/Web/API/shadowRoot) or not.
+   * Return the `shadowRoot` otherwise return `false`.
+   * @alias module:isInShadowRoot
+   * @param {Node} node the node to check
+   * @return {Node}
+   */
+  PolymerVis.isInShadowRoot = function isInShadowRoot(node) {
+    while (node) {
+      if (node.toString() === '[object ShadowRoot]') {
+        return node;
+      }
+      node = node.parentNode;
+    }
+    return false;
+  };
 })((window.PolymerVis = window.PolymerVis || {}));

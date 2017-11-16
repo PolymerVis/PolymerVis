@@ -70,3 +70,15 @@ into the shadowRoot.
 ```js
 PolymerVis.insertCssIntoShadowRoot('https://some.css', ele.shadowRoot, 'custom');
 ```
+  <a name="exp_module_isInShadowRoot--PolymerVis.isInShadowRoot"></a>
+
+## PolymerVis.isInShadowRoot(node) ⇒ <code>Node</code> ⏏
+Check if the node is inside a [`shadowRoot`](https://developer.mozilla.org/en-US/docs/Web/API/shadowRoot) or not.
+Return the `shadowRoot` otherwise return `false`.
+
+**Kind**: global method of [<code>PolymerVis.isInShadowRoot</code>](#exp_module_isInShadowRoot--PolymerVis.isInShadowRoot)  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| node | <code>Node</code> | the node to check |
+
