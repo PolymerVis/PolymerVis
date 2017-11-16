@@ -62,6 +62,7 @@
    * @alias module:insertCssIntoShadowRoot
    * @param {String} cssSrc url to the css file
    * @param {String} shadowRoot Node to insert the `style` element
+   * @param {Function} onload callback when CSS is inserted
    * @param {String} id id for style element
    * @example
    * PolymerVis.insertCssIntoShadowRoot('https://some.css', ele.shadowRoot, 'custom');
@@ -69,6 +70,7 @@
   PolymerVis.insertCssIntoShadowRoot = function insertCssIntoShadowRoot(
     cssSrc,
     shadowRoot,
+    onload,
     id = 'custom'
   ) {
     var httpRequest = new XMLHttpRequest();
@@ -85,6 +87,7 @@
           style.id = id;
           style.textContent = httpRequest.responseText;
           shadowRoot.appendChild(style);
+          if (onload) onload(style);
         } else {
           console.warn(`cannot load ${cssSrc}`);
         }
