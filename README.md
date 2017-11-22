@@ -54,7 +54,7 @@ imported document contents.
 
   <a name="exp_module_insertCssIntoShadowRoot--PolymerVis.insertCssIntoShadowRoot"></a>
 
-## PolymerVis.insertCssIntoShadowRoot(cssSrc, shadowRoot, id) ⏏
+## PolymerVis.insertCssIntoShadowRoot(cssSrc, shadowRoot, onload, id) ⏏
 Load an external CSS file, and insert a `style` element
 into the shadowRoot.
 
@@ -64,6 +64,7 @@ into the shadowRoot.
 | --- | --- | --- |
 | cssSrc | <code>String</code> | url to the css file |
 | shadowRoot | <code>String</code> | Node to insert the `style` element |
+| onload | <code>function</code> | callback when CSS is inserted |
 | id | <code>String</code> | id for style element |
 
 **Example**  
