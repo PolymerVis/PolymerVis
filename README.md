@@ -1,4 +1,7 @@
 # PolymerVis
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/PolymerVis/polymer-vis.svg)](https://greenkeeper.io/)
+
 PolymerVis is a suite of Polymer elements for visualizations.
 
 ## Quick start
